@@ -1,0 +1,406 @@
+@font-face {
+    font-family:"Retro" ;
+    src: url("image/Neon.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+#page1{
+    /*overflow-y: hidden;
+    overflow-x: hidden;*/
+}
+
+body{
+    background-color: #0a0321;
+    background-image: url(image/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+h1{
+    font-family: Retro;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 20px white;
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    margin-bottom: 5px;
+}
+
+h2{
+    font-family: Retro;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 4px rgb(255, 255, 255);
+    text-align: start;
+    margin-top: 20px;
+    padding: 20px;
+    margin-bottom: 5px;
+}
+
+button{
+    transition: all 300ms ease-in-out;
+}
+ 
+button:hover{
+    color: rgb(255, 0, 153);
+    text-shadow: 1.2px 1.2px rgb(0, 191, 255);
+	transform: translate(0,-10px);
+    border-color: rgb(239, 0, 223);
+}
+
+#photo{         /*illustration de la carte*/
+    margin-top: 15px;
+    height: 210px;
+    width: 161px;
+    border-radius: 20px 20px 0 0 ;
+    box-shadow: 0px 0px 15px rgb(255, 255, 255);
+}
+
+.description{           /*description de la carte*/
+    background-color: rgb(255, 255, 255);
+    height: 150px;
+    width: 161px;
+    border-radius: 0 0 20px 20px;
+
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+
+    padding-top: 10px;
+    animation: couleur 4s infinite linear alternate;
+    color: white;
+    font-family: Retro;
+    box-shadow: 0px 0px 15px rgb(255, 255, 255);
+    
+}
+
+.resto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.resto:hover{
+    border-color: rgb(0, 200, 255);
+}
+
+#illustration:hover{
+    box-shadow: 0px 0px 50px rgb(255, 221, 0);
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+footer{
+    margin-top: 50px;
+    background-color: #0a0321;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+footer p{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: Retro;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 10px white;
+    line-height: 1px;
+}
+
+footer a{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: Retro;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 10px white;
+    text-decoration: none;
+}
+
+.carte{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.carte a{
+    color: white;
+    text-decoration: none;
+}
+
+.wip{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 10px;
+    width: 10px;
+    font-size: 5px;
+    animation: rotation 2s linear infinite;
+}
+
+/*--------------------------------ANIMATION--------------------------*/
+
+@keyframes couleur{
+    0% {background-color:#E53500}
+    20% {background-color:#F39C12}
+    40% {background-color: #2ECC71}
+    60% {background-color:#16A085}
+    80% {background-color:#3498DB}
+    100% {background-color: #9B59B6}
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/*-------------------------------MEDIA SCREEN--------------------------*/
+
+@media screen and (min-width: 600px){   /*GRAND ECRANS*/
+
+    h1{
+        font-size: 80px;
+    }
+
+    h2{
+        font-size: 35px;
+        text-align: center;
+        margin-left: 160px;
+        margin-right: 160px;
+        text-shadow: 0px 0px 3px rgb(0, 0, 0);
+    }
+
+    #illustration {
+        height: 300px;
+        width: 230px;
+        box-shadow: 0px 0px 10px rgb(255, 255, 255);
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    button{
+        font-family: retro;
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        background: linear-gradient(225deg, #6e15a9 0%, #533ebe 50%, #3768d4 100%);
+        box-shadow: 0px 0px 10px white;
+        border-radius: 10px;
+        border-color: white;
+        height: 55px;
+        width: 155px;
+        cursor: pointer;
+        margin-bottom: 8px;
+        margin-top : 8px;
+    }
+
+    .choix{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding-left: 50px;
+        padding-right: 50px;
+        margin: 50px;
+
+    }
+
+    #illustration {
+        height: 500px;
+        width: 380px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    #page_carte{
+        margin-top: 20px;
+        height: 80px;
+        width: 200px;
+    }
+
+    footer{
+        margin-top: 220px;
+    }    
+
+    #info{
+        width: 200px;
+        height: 50px;
+    }
+
+
+    /*----------------------------------PAGE 2---------------------------------*/
+    
+    #accueil{
+        transition: all 300ms ease-in-out;
+    }
+
+    #accueil:hover{
+        width: 200px;
+        transform: translate(0,-10px);
+    }
+
+    #gps{
+        width: 20px;
+        height: 20px;
+    }
+
+    .description{
+        height: 200px;
+        width: 200px;
+        font-size: 20px;
+    }
+
+    #photo{
+        height: 270px;
+        width: 200px;
+    }
+
+    h3{
+        font-size: 30px;
+    }
+
+    
+    /*----------------------------------PAGE 3---------------------------------*/
+
+    .container_carte{
+        margin-bottom: 0px;
+    }
+}
+
+@media screen and (max-width: 600px){   /*PETITS ECRANS*/
+
+    h2{
+        text-shadow: 0px 0px 3px rgb(0, 0, 0);
+    }
+
+    button{
+        font-family: retro;
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        background: linear-gradient(225deg, #6e15a9 0%, #533ebe 50%, #3768d4 100%);
+        box-shadow: 0px 0px 10px white;
+        border-radius: 10px;
+        border-color: white;
+        height: 35px;
+        width: 85px;
+        cursor: pointer;
+        margin-bottom: 8px;
+        margin-top : 8px;
+    }
+
+    #illustration {
+        height: 300px;
+        width: 250px;
+        box-shadow: 1px 1px 15px white;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+
+    #info{
+        width: 200px;
+        height: 35px;
+    }
+
+    #accueil{
+        width: 120px;
+        height: 35px;
+    }
+
+
+    .choix{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
+    /*----------------------PAGE 2--------------------------------*/
+
+
+    #gps{
+        width: 20px;
+        height: 20px;
+    }
+
+    #page_carte{
+        margin-top: 20px;
+        height: 60px;
+        width: 180px;
+    }
+
+    footer p{
+        font-size: 13px;
+    }
+    footer a{
+        font-size: 13px;
+    }
+
+
+
+    /*-----------------------------PAGE 3--------------------------------*/
+
+    #page3 h1{
+        font-size: 20px;
+    }
+
+    #page3 #soustexte h1{
+        font-size: 18px;
+        text-shadow: 0px 0px 3px rgb(0, 0, 0);
+    }
+    
+    #page3 #photo{
+        width: 115px;
+        height: 120px;
+    }
+    #page3 .description{
+        width: 115px;
+        height: 140px;
+    }
+    #page3 h3{
+        font-size: 15px;
+        text-shadow: 1px 1px 1px black;
+    }
+    #page3 .carte p{
+        font-size: 12px;
+        text-shadow: 1px 1px 1px black;
+    }
+
+
+    .container_carte{
+        display: flex;
+        justify-content: space-around;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+}
